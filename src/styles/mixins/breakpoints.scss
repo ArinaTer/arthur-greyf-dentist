@@ -1,0 +1,23 @@
+@mixin media($breakpoint, $type: "max") {
+  @if $type == "max" {
+    @media (max-width: #{$breakpoint}px) {
+      @content;
+    }
+  } @else if $type == "min" {
+    @media (min-width: #{$breakpoint}px) {
+      @content;
+    }
+  }
+}
+
+@mixin mediaHeight($breakpoint, $type: "max") {
+  @if $type == "max" {
+    @media (max-height: #{$breakpoint}px) {
+      @content;
+    }
+  } @else if $type == "min" {
+    @media (min-height: #{$breakpoint}px) {
+      @content;
+    }
+  }
+}

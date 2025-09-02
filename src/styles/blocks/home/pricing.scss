@@ -1,0 +1,231 @@
+@use "../../utils/utils" as *;
+@use "../../components/components" as *;
+
+.pricing {
+  margin-bottom: 8rem;
+
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+  }
+
+  .container {
+    max-width: 1440px;
+
+    @include media(1440.98, "max") {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+  // .pricing__wrapper
+  &__wrapper {
+    background: $sand;
+    padding: 4rem;
+    overflow: hidden;
+
+    @include media(1280.98, "max") {
+      padding: 4rem 2rem;
+    }
+
+
+    @include media(992.98, "max") {
+      padding: 4rem 3rem;
+    }
+
+    @include media(576.98, "max") {
+      padding: 4rem 2rem;
+    }
+  }
+
+  // .pricing__title
+  &__title {
+    @include h1;
+    margin-bottom: 4rem;
+    text-align: center;
+
+    @include media(992.98, "max") {
+      @include h1-mob;
+    }
+
+    @include media(576.98, "max") {
+      margin-bottom: 3rem;
+    }
+  }
+
+  // .pricing__slider
+  &__slider {
+    margin-bottom: 4rem;
+
+    @include media(576.98, "max") {
+      margin-bottom: 3rem;
+    }
+  }
+
+  // .pricing__swiper
+  &__swiper {
+    height: 100%;
+
+    @include media(1024.98, "max") {
+      overflow: visible;
+    }
+  }
+
+  // .pricing__swiper-wrapper
+  &__swiper-wrapper {
+  }
+
+  // .pricing__swiper-slide
+  &__swiper-slide {
+    height: auto;
+  }
+
+  // .pricing__card
+  &__card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 2rem;
+    background: $white;
+    height: 100%;
+  }
+
+  // .pricing__card-title
+  &__card-title {
+    @include h3;
+  }
+
+  // .pricing__card-subtitle
+  &__card-subtitle {
+    @include small;
+    margin-top: 0.5rem;
+  }
+
+  // .pricing__card-price-box
+  &__card-price-box {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  // .pricing__card-price
+  &__card-price {
+    @include paragraph;
+    color: $green;
+  }
+
+  // .pricing__card-value
+  &__card-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $green;
+    padding: 0 1rem;
+    height: 3.2rem;
+    border-radius: 0.8rem;
+    color: $white;
+    @include inter-semiBold;
+    font-size: 1.6rem;
+    line-height: 1.62;
+  }
+
+  // .pricing__card-cost
+  &__card-cost {
+    @include small;
+    color: $green;
+    margin-bottom: 2rem;
+  }
+
+  // .pricing__card-tags
+  &__card-tags {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  // .pricing__card-tag
+  &__card-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    height: 3.2rem;
+    border-radius: 0.8rem;
+    margin-bottom: 2rem;
+    @include inter-semiBold;
+    font-size: 1.2rem;
+    line-height: 1.66;
+    width: max-content;
+    white-space: nowrap;
+
+    @include media(1280.98, "max") {
+      font-size: 1rem;
+      padding: 0 0.5rem;
+      height: 2.5rem;
+    }
+
+    @include media(992.98, "max") {
+      font-size: 1.2rem;
+      height: 3.2rem;
+      padding: 0 1rem;
+    }
+  }
+
+  // .pricing__card-tag--green
+  &__card-tag--green {
+    background: $light-green;
+    color: $green;
+  }
+  // .pricing__card-tag--blue
+  &__card-tag--blue {
+    background: $light-blue;
+    color: $blue;
+  }
+
+  // .pricing__card-list
+  &__card-list {
+    list-style: disc;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  // .pricing__card-item
+  &__card-item {
+    @include small;
+  }
+
+  // .pricing__footer
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90rem;
+    width: 100%;
+    margin: 0 auto;
+
+    @include media(992.98, "max") {
+      max-width: 100%;
+    }
+  }
+
+  // .pricing__button
+  &__button {
+    width: max-content;
+    margin-bottom: 4rem;
+
+    @include media(576.98, "max") {
+      margin-bottom: 3rem;
+    }
+  }
+
+  // .pricing__note
+  &__note {
+    @include small;
+    color: $sand-dark;
+    text-align: center;
+  }
+}

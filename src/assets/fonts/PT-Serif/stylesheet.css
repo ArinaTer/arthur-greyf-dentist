@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'PT Serif';
+    src: url('PTSerif-Bold.woff2') format('woff2'),
+        url('PTSerif-Bold.woff') format('woff'),
+        url('PTSerif-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    src: url('PTSerif-BoldItalic.woff2') format('woff2'),
+        url('PTSerif-BoldItalic.woff') format('woff'),
+        url('PTSerif-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+

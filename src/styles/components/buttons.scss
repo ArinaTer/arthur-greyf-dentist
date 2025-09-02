@@ -1,0 +1,53 @@
+@use "../utils/utils" as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 7rem;
+
+  &-icon {
+    width: 1.6rem;
+  }
+
+  &-text {
+    color: $white;
+    @include small-caps;
+  }
+
+  &--green {
+    height: 4rem;
+    background: $green;
+    padding: 1.2rem 2rem;
+    transition: all 0.3s ease-in-out;
+
+    @include device-pointer() {
+      &:hover {
+        background: #028468;
+      }
+    }
+
+    &:focus {
+      background: #028065;
+    }
+  }
+
+  &--blue {
+    height: 5rem;
+    background: $blue;
+    padding: 2rem 3rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &--light-blue {
+    height: 5rem;
+    background: $light-blue;
+    padding: 2rem 3rem;
+    transition: all 0.3s ease-in-out;
+
+    .button-text {
+      color: $blue;
+    }
+  }
+}

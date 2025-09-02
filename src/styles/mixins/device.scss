@@ -1,0 +1,11 @@
+@mixin device-touch() {
+	@media (hover: none) {
+		@content;
+	}
+}
+
+@mixin device-pointer() {
+	@media (hover: hover) {
+		@content;
+	}
+}

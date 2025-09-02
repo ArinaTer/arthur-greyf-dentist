@@ -1,0 +1,132 @@
+@use "../../utils/utils" as *;
+@use "../../components/components" as *;
+
+.dental-showcase {
+  margin-bottom: 8rem;
+
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+  }
+
+  // .dental-showcase__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+
+    @include media(992.98, "max") {
+      align-items: center;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  // .dental-showcase__image
+  &__image {
+    flex: 0 0 50%;
+    max-width: 50%;
+    border-radius: 2rem;
+    overflow: hidden;
+    height: auto;
+    display: flex;
+
+    @include media(992.98, "max") {
+      order: 2;
+      flex: initial;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    @include media(768.98, "max") {
+      height: 38rem;
+    }
+
+    @include media(576.98, "max") {
+      height: 18rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 75%;
+
+      @include media(576.98, "max") {
+        object-position: 100% 14%;
+      }
+    }
+  }
+
+  // .dental-showcase__content
+  &__content {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @include media(992.98, "max") {
+      order: 1;
+      flex: 0 0 100%;
+      max-width: 100%;
+      width: 100%;
+      gap: 1rem;
+    }
+  }
+
+  // .dental-showcase__link
+  &__link {
+    border-radius: 2rem;
+    padding: 4rem 3rem 3rem 4rem;
+    background: $light-blue;
+    min-height: 24rem;
+    display: flex;
+    flex-direction: column;
+
+    @include media(992.98, "max") {
+      min-height: 18rem;
+      padding: 2rem 2rem 3rem 2rem;
+    }
+  }
+
+  // .dental-showcase__title
+  &__title {
+    @include h3;
+    margin-bottom: 1rem;
+
+    @include media(992.98, "max") {
+    }
+  }
+
+  // .dental-showcase__description
+  &__description {
+    @include small;
+
+    @include media(576.98, "max") {
+      display: none;
+    }
+  }
+
+  // .dental-showcase__arrow
+  &__arrow {
+    background: $white;
+    width: 4rem;
+    height: 4rem;
+    padding: 1.1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-top: auto;
+
+    @include media(992.98, "max") {
+      margin-right: 1rem;
+    }
+
+    img {
+      width: 1.8rem;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@use "../utils/utils" as *;
+
+.accordion {
+  // .accordion__item
+  &__item {
+    border-bottom: 2px solid #d9d9d9;
+    height: auto;
+    transition: all 0.5s linear;
+
+    &:first-child {
+      padding-top: 0;
+      border-top: none;
+
+      .accordion__trigger {
+        padding-top: 0;
+      }
+    }
+  }
+
+  // .accordion__trigger
+  &__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem 0;
+    gap: 2rem;
+  }
+
+  // .accordion__title
+  &__title {
+    @include h3;
+    text-align: left;
+  }
+
+  // .accordion__icon
+  &__icon {
+    width: 2.4rem;
+    height: auto;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+
+    ._active & {
+      transform: rotate(45deg);
+    }
+  }
+
+  // .accordion__content
+  &__content {
+    padding-bottom: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding-bottom 0.5s ease-in-out;
+
+    ._active & {
+      padding-bottom: 2rem;
+      max-height: 800px;
+      visibility: visible;
+    }
+  }
+
+  // .accordion__text
+  &__text {
+    @include paragraph;
+  }
+}

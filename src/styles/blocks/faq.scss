@@ -1,0 +1,49 @@
+@use "../utils/utils" as *;
+@use "../components/components" as *;
+
+.faq {
+  margin-bottom: 8rem;
+
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+  }
+
+  // .faq__wrapper
+  &__wrapper {
+    max-width: 67rem;
+    width: 100%;
+    margin: 0 auto;
+
+    @include media(768.98, "max") {
+      max-width: 100%;
+    }
+  }
+
+  // .faq__title
+  &__title {
+    @include h1;
+    margin-bottom: 3rem;
+    text-align: center;
+
+    @include media(576.98, "max") {
+      @include h1-mob;
+    }
+  }
+
+  // .faq__accordion
+  &__accordion {
+    .accordion__item {
+      &:nth-child(1) {
+        border-top: 2px solid #d9d9d9;
+        padding-top: 2.7rem;
+      }
+    }
+    .accordion__trigger {
+      padding: 2.7rem 0;
+    }
+
+    ._active .accordion__content {
+      padding-bottom: 2.7rem;
+    }
+  }
+}

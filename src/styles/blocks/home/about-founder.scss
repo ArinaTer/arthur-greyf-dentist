@@ -1,0 +1,275 @@
+@use "../../utils/utils" as *;
+@use "../../components/components" as *;
+
+.about-founder {
+  margin-bottom: 8rem;
+
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+  }
+
+  .container {
+    @include media(576.98, "max") {
+      padding: 0;
+    }
+  }
+
+  // .about-founder__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: stretch;
+    border-radius: 2rem 2rem 0 0;
+    overflow: hidden;
+
+    @include media(576.98, "max") {
+      border-radius: 0;
+    }
+  }
+
+  // .about-founder__image
+  &__image {
+    min-width: 55.6rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include media(992.98, "max") {
+      display: none;
+    }
+  }
+
+  // .about-founder__content
+  &__content {
+    width: auto;
+    background: $sand;
+    padding: 4rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    @include media(992.98, "max") {
+      width: 100%;
+    }
+
+    @include media(576.98, "max") {
+      padding: 3rem;
+    }
+  }
+
+  // .about-founder__content-header
+  &__content-header {
+    @include media(992.98, "max") {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    @include media(576.98, "max") {
+      margin-bottom: 2rem;
+    }
+  }
+
+  // .about-founder__image-mob
+  &__image-mob {
+    display: none;
+    @include media(992.98, "max") {
+      display: block;
+      width: 12rem;
+      height: auto;
+      border-radius: 20%;
+    }
+  }
+
+  // .about-founder__subtitle
+  &__subtitle {
+    @include h2;
+    margin-bottom: 2rem;
+
+    @include media(992.98, "max") {
+      margin-bottom: 0;
+      @include h2-mob;
+    }
+  }
+
+  // .about-founder__name
+  &__name {
+    @include h1;
+    margin-bottom: 2rem;
+
+    @include media(992.98, "max") {
+      @include h1-mob;
+    }
+  }
+
+  // .about-founder__degree
+  &__degree {
+    @include h3;
+    margin-bottom: 4rem;
+
+    @include media(576.98, "max") {
+      margin-bottom: 2rem;
+    }
+  }
+
+  // .about-founder__text
+  &__text {
+    @include paragraph;
+    margin-bottom: 4rem;
+
+    @include media(576.98, "max") {
+      margin-bottom: 2rem;
+    }
+  }
+
+  // .about-founder__achievements
+  &__achievements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.1rem;
+    margin-bottom: 4rem;
+
+    @include media(992.98, "max") {
+      gap: 2rem;
+    }
+
+    @include media(576.98, "max") {
+      margin-bottom: 2rem;
+    }
+  }
+
+  // .about-founder__achievement
+  &__achievement {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  // .about-founder__achievement-icon
+  &__achievement-icon {
+    width: 4rem;
+    height: auto;
+  }
+
+  // .about-founder__achievement-text
+  &__achievement-text {
+    @include small;
+
+    @include media(992.98, "max") {
+      @include small-mob;
+    }
+  }
+
+  // .about-founder__button
+  &__button {
+    width: max-content;
+
+    @include media(576.98, "max") {
+      width: 100%;
+    }
+  }
+
+  // .about-founder__slides
+  &__slides {
+    padding: 4rem;
+    background: $light-blue;
+
+    @include media(992.98, "max") {
+      overflow: hidden;
+    }
+  }
+
+  // .about-founder__slides-wrapper
+  &__slides-wrapper {
+    position: relative;
+  }
+
+  // .about-founder__swiper
+  &__swiper {
+    margin: 0 auto;
+    width: calc(100% - 12rem);
+    z-index: 2;
+
+    @include media(992.98, "max") {
+      width: 100%;
+      overflow: visible;
+    }
+  }
+
+  // .about-founder__swiper-wrapper
+  &__swiper-wrapper {
+  }
+
+  // .about-founder__swiper-slide
+  &__swiper-slide {
+  }
+
+  // .about-founder__cooperator
+  &__cooperator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .about-founder__cooperator-image
+  &__cooperator-image {
+    width: 10rem;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  // .about-founder__cooperator-namer
+  &__cooperator-namer {
+    @include h3;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  // .about-founder__cooperator-role
+  &__cooperator-role {
+    @include paragraph;
+    text-align: center;
+  }
+
+  // .about-founder__swiper-navigation
+  &__swiper-navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+
+    @include media(992.98, "max") {
+      display: none;
+    }
+  }
+
+  // .about-founder__swiper-button
+  &__swiper-button {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: $white;
+    padding: 1.1rem;
+    cursor: pointer;
+  }
+
+  // .about-founder__swiper-button--prev
+  &__swiper-button--prev {
+    transform: rotate(180deg);
+  }
+
+  // .about-founder__swiper-button--next
+  &__swiper-button--next {
+  }
+}

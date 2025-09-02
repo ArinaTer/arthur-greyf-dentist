@@ -1,0 +1,32 @@
+@use "../utils/utils" as *;
+
+body {
+  @include paragraph;
+  overflow-x: hidden;
+  color: #000000;
+  background-color: #ffffff;
+
+  &.hidden {
+    overflow: hidden;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1360px;
+  width: 100%;
+  position: relative;
+
+  @include media(1440.98, "max") {
+    max-width: 100%;
+    padding: 0 4rem;
+  }
+
+  @include media(992.98, "max") {
+    padding: 0 3rem;
+  }
+
+  @include media(576.98, "max") {
+    padding: 0 2rem;
+  }
+}

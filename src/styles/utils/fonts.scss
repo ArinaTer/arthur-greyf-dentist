@@ -1,0 +1,31 @@
+@use "../mixins/font-face" as *;
+
+// PT-Serif
+@include font-face(
+  "PT-Serif-bold-italic", "../assets/fonts/PT-Serif/PTSerif-BoldItalic"
+);
+
+//Inter
+@include font-face("Inter-Regular", "../assets/fonts/Inter/Inter-Regular");
+@include font-face("Inter-SemiBold", "../assets/fonts/Inter/Inter-SemiBold");
+@include font-face("Inter-ExtraBold", "../assets/fonts/Inter/Inter-ExtraBold");
+
+
+
+// "PT-Serif
+@mixin PT-Serif-bold-italic {
+  font-family: PT-Serif-bold-italic, Arial, sans-serif;
+}
+
+//Inter
+@mixin inter-regular {
+  font-family: Inter-Regular, Arial, sans-serif;
+}
+
+@mixin inter-semiBold {
+  font-family: Inter-SemiBold, Arial, sans-serif;
+}
+
+@mixin inter-extraBold {
+  font-family: Inter-ExtraBold, Arial, sans-serif;
+}
