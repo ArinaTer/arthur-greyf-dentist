@@ -1,0 +1,104 @@
+@use "../../utils/utils" as *;
+@use "../../components/components" as *;
+
+.feedback {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+    margin-top: 6rem;
+  }
+
+  // .feedback__title
+  &__title {
+    @include h1;
+    margin-bottom: 6rem;
+    text-align: center;
+
+    @include media(992.98, "max") {
+      @include h1-mob;
+    }
+  }
+
+  // .feedback__wrapper
+  &__wrapper {
+  }
+
+  // .feedback__form
+  &__form {
+    max-width: 44rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  // .feedback__form-fields
+  &__form-fields {
+  }
+
+  // .feedback__form-field
+  &__form-field {
+    margin-bottom: 2rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  // .feedback__form-input
+  &__form-input {
+    width: 100%;
+  }
+
+  // .feedback__form-label
+  &__form-label {
+  }
+
+  // .feedback__form-textarea
+  &__form-textarea {
+  }
+
+  // .feedback__form-label-checkbox
+  &__form-label-checkbox {
+    margin-top: 3rem;
+  }
+
+  // .feedback__form-button
+  &__form-button {
+    margin-top: 3rem;
+    width: max-content;
+
+    @include media(576.98, "max") {
+      width: 100%;
+    }
+  }
+}
+
+.referral-rewards-feedback {
+  margin: 0;
+
+  @include media(992.98, "max") {
+    margin: 0;
+  }
+  // .feedback__title
+  .feedback__title {
+    @include h2;
+    margin-bottom: 3rem;
+    text-align: left;
+
+    @include media(992.98, "max") {
+    }
+  }
+
+   // .feedback__form-textarea
+  // .feedback__form-input
+  .feedback__form-input,
+  .feedback__form-textarea {
+    background: $white !important;
+  }
+
+  // .form-checkbox__custom
+  .form-checkbox__custom{
+    background: $medium-gray !important;
+  }
+}

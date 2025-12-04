@@ -1,0 +1,43 @@
+@use "../../utils/utils" as *;
+@use "../../components/components" as *;
+
+.appointment-cta {
+  margin-bottom: 6rem;
+
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+  }
+
+  // .appointment-cta__wrapper
+  &__wrapper {
+    background: $sand;
+    border-radius: 2rem;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    @include media(992.98, "max") {
+      flex-direction: column;
+      gap: 2rem;
+      padding: 3rem;
+    }
+  }
+
+  // .appointment-cta__text
+  &__text {
+    @include h3;
+    text-align: center;
+  }
+
+  // .appointment-cta__button
+  &__button {
+    max-width: 30rem;
+    width: 100%;
+
+    @include media(576.98, "max") {
+      max-width: 100%;
+    }
+  }
+}

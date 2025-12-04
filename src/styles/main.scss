@@ -1,3 +1,7 @@
+// Vendors
+@use "./vendors/swiper";
+@use "./vendors/fancybox";
+
 // Utils
 @use "./utils/utils";
 
@@ -8,7 +12,25 @@
 // Blocks
 @use "./layout/header";
 @use "./layout/mobile-nav";
+@use "./layout/submenu";
 @use "./layout/footer";
+@use "./layout/cta-bar";
 
 // Pages
 @use "./pages/home";
+@use "./pages/blog";
+@use "./pages/blog-detail";
+@use "./pages/quiz";
+@use "./pages/implant-supported-dentures";
+@use "./pages/what-sets-us-apart";
+@use "./pages/meet-the-team";
+@use "./pages/dr-arthur-greyf";
+@use "./pages/testimonials";
+@use "./pages/office-visits";
+@use "./pages/contact-us";
+@use "./pages/CEREC";
+@use "./pages/pricing";
+@use "./pages/financial-options";
+@use "./pages/referral-rewards";
+@use "./pages/services";
+@use "./pages/faq";

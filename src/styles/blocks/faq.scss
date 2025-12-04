@@ -35,15 +35,19 @@
     .accordion__item {
       &:nth-child(1) {
         border-top: 2px solid #d9d9d9;
-        padding-top: 2.7rem;
+        padding-top: 2rem;
       }
     }
     .accordion__trigger {
-      padding: 2.7rem 0;
+      padding: 2rem 0;
+    }
+
+    .accordion__content {
+      transform: translateY(-1rem);
     }
 
     ._active .accordion__content {
-      padding-bottom: 2.7rem;
+      padding-bottom: 2rem;
     }
   }
 }

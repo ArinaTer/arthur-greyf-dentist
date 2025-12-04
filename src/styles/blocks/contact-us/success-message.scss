@@ -1,0 +1,67 @@
+@use "../../utils/utils" as *;
+@use "../../components/components" as *;
+
+.success-message {
+  margin-bottom: 6rem;
+
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+  }
+
+  // .success-message__wrapper
+  &__wrapper {
+    background: $light-green;
+    border-radius: 2rem;
+    padding: 6rem;
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+
+    @include media(576.98, "max") {
+      width: 100%;
+      padding: 4rem;
+    }
+  }
+
+  // .success-message__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 39.5rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  // .success-message__icon
+  &__icon {
+    max-width: 8rem;
+    width: 100%;
+    height: 8rem;
+    margin-bottom: 3rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // .success-message__title
+  &__title {
+    @include h2;
+    margin-bottom: 3rem;
+    text-align: center
+  }
+
+  // .success-message__message
+  &__message {
+    @include paragraph;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  // .success-message__button
+  &__button {
+    width: max-content;
+  }
+}

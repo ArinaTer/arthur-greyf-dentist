@@ -1,0 +1,32 @@
+<div class="submenu">
+    <div class="submenu__overlay"></div>
+    <div class="submenu__wrapper" id="submenuMobile">
+        <div class="container">
+            <div class="submenu__inner">
+                <div class="submenu__toggle">
+                    <button type="button" class="submenu__toggle-btn" data-expanded="false"
+                        aria-controls="submenuMobile">
+                        <span class="submenu__toggle-title">
+                            <block name="title">Title</block>
+                        </span>
+                        <span class="submenu__toggle-icon" data-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="submenu__dropdown">
+                    <div class="submenu__dropdown-wrapper">
+                        <span class="submenu__toggle-title submenu__toggle-title-dropdown">
+                            <block name="title">Title</block>
+                        </span>
+                        <ul class="submenu__list">
+                            <block name="links">
+                                <li class="submenu__item _active">
+                                    <a href="#" class="submenu__link">Link</a>
+                                </li>
+                            </block>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

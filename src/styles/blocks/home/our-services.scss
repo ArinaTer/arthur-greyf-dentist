@@ -103,7 +103,7 @@
   // .our-services__swiper
   &__swiper {
     @include media(576.98, "max") {
-      overflow: visible;
+      overflow: visible !important;
     }
   }
 
@@ -113,7 +113,7 @@
 
   // .our-services__swiper-slide
   &__swiper-slide {
-    height: auto;
+    height: auto !important;
     @include media(576.98, "max") {
     }
   }

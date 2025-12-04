@@ -1,0 +1,83 @@
+@use "../utils/utils" as *;
+@use "../components/components" as *;
+
+.differences {
+  margin-bottom: 6rem;
+
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+  }
+
+  // .differences__wrapper
+  &__wrapper {
+    border-radius: 2rem;
+    overflow: hidden;
+    padding: 6rem;
+    background: $light-blue;
+
+    @include media(992.98, "max") {
+      padding: 6rem 2rem;
+    }
+  }
+
+  // .differences__title
+  &__title {
+    text-align: center;
+    margin-bottom: 4rem;
+    @include h1;
+
+    @include media(992.98, "max") {
+      @include h1-mob;
+    }
+  }
+
+  // .differences__grid
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @include media(992.98, "max") {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // .differences__card
+  &__card {
+    border-radius: 2rem;
+    background: $white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  // .differences__card-content
+  &__card-content {
+    padding: 3rem;
+  }
+
+  // .differences__card-title
+  &__card-title {
+    @include h2;
+    margin-bottom: 1rem;
+  }
+
+  // .differences__card-text
+  &__card-text {
+    @include paragraph;
+  }
+
+  // .differences__card-image
+  &__card-image {
+    max-height: 26rem;
+    height: 100%;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

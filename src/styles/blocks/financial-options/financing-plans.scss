@@ -1,0 +1,69 @@
+@use "../../utils/utils" as *;
+@use "../../components/components" as *;
+
+.financing-plan {
+  margin-bottom: 6rem;
+
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+  }
+
+  // .financing-plan__wrapper
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @include media(768.98, "max") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // .financing-plan__col
+  &__col {
+    width: 100%;
+  }
+
+  // .financing-plan__col--double
+  &__col--double {
+    grid-column: span 2;
+  }
+
+  // .financing-plan__lists
+  &__lists {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @include media(768.98, "max") {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0;
+    }
+  }
+
+  // .financing-plan__title
+  &__title {
+    @include h2;
+    margin-bottom: 2rem;
+    min-height: 3rem;
+  }
+
+  // .financing-plan__text
+  &__text {
+    margin-top: 1rem;
+    @include paragraph;
+  }
+
+  // .financing-plan__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    list-style-type: disc;
+  }
+
+  // .financing-plan__item
+  &__item {
+    @include paragraph;
+  }
+}

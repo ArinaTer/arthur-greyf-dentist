@@ -1,0 +1,117 @@
+@use "../../utils/utils" as *;
+@use "../../components/components" as *;
+
+.smile-freely {
+  margin-bottom: 6rem;
+
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+  }
+
+  // .smile-freely__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: 4rem;
+
+    @include media(992.98, "max") {
+      flex-direction: column;
+    }
+  }
+
+  // .smile-freely__image
+  &__image {
+    border-radius: 2rem;
+    overflow: hidden;
+    width: 42rem;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    @include media(992.98, "max") {
+      width: 12rem;
+      height: 12rem;
+      border-radius: 50%;
+      flex: initial;
+      position: absolute;
+    }
+
+    @include media(576.98, "max") {
+      position: relative;
+      width: 100%;
+      min-height: 39rem;
+      border-radius: 2rem;
+    }
+
+    img {
+      width: 100%;
+      flex: 1;
+      object-fit: cover;
+      object-position: center;
+
+      @include media(992.98, "max") {
+        flex: initial;
+      }
+
+      @include media(576.98, "max") {
+        object-position: 100% 9%;
+        height: 100%;
+      }
+    }
+  }
+
+  // .smile-freely__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
+
+  // .smile-freely__title
+  &__title {
+    @include h2;
+    margin-bottom: 3rem;
+
+    @include media(992.98, "max") {
+      padding-left: 16rem;
+      height: 12rem;
+      display: flex;
+      align-items: center;
+    }
+
+    @include media(576.98, "max") {
+      height: auto;
+      padding-left: 0;
+    }
+  }
+
+  // .smile-freely__list
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 2rem;
+
+    @include media(576.98, "max") {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // .smile-freely__item
+  &__item {
+    padding-right: 2rem;
+    @include media(1280.98, "max") {
+        padding-right: 0
+    }
+  }
+
+  // .smile-freely__label
+  &__label {
+    @include h3;
+    margin-bottom: 1rem;
+  }
+
+  // .smile-freely__text
+  &__text {
+    @include paragraph;
+  }
+}

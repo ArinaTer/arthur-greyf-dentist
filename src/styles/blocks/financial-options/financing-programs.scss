@@ -1,0 +1,149 @@
+@use "../../utils/utils" as *;
+@use "../../components/components" as *;
+
+.financing-programs {
+  margin-bottom: 6rem;
+
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+  }
+
+  // .financing-programs__wrapper
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    @include media(992.98, "max") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(768.98, "max") {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // .financing-programs__card
+  &__card {
+    padding: 4rem;
+    border-radius: 2rem;
+
+    @include media(992.98, "max") {
+      padding: 3rem;
+    }
+  }
+
+  // .financing-programs__card-header
+  &__card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  // .financing-programs__card-icon
+  &__card-icon {
+    max-width: 4rem;
+    height: 4rem;
+    width: 100%;
+  }
+
+  // .financing-programs__card-title
+  &__card-title {
+    @include h2;
+    white-space: nowrap;
+
+    @include media(1280.98, "max") {
+      @include h2-mob;
+    }
+
+    @include media(992.98, "max") {
+      @include h2;
+    }
+  }
+
+  // .financing-programs__card-grid
+  &__card-grid {
+  }
+
+  // .financing-programs__card-row
+  &__card-row {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    &:first-of-type {
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  // .financing-programs__card-label
+  &__card-label {
+    margin-bottom: 0.5rem;
+    @include small;
+    color: $sand-dark;
+    display: block;
+  }
+
+  // .financing-programs__card-value
+  &__card-value {
+    @include paragraph;
+    display: block;
+  }
+
+  // .financing-programs__card-actions
+  &__card-actions {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  // .financing-programs__card-button
+  &__card-button {
+    width: max-content;
+
+    @include media(576.98, "max") {
+      width: 100%;
+    }
+  }
+
+  // .financing-programs__card-note
+  &__card-note {
+    @include small;
+    color: $sand-dark;
+  }
+
+  // .financing-programs__card--carecredit
+  &__card--carecredit {
+    background: #eff8f8;
+
+    .financing-programs__card-button {
+      background: #007161;
+    }
+  }
+
+  // .financing-programs__card--cherry
+  &__card--cherry {
+    background: #eefef8;
+
+    .financing-programs__card-button {
+      background: #0e202f;
+    }
+  }
+
+  // .financing-programs__card--proceed
+  &__card--proceed {
+    background: #ebf2f8;
+
+    .financing-programs__card-button {
+      background: #3b7cab;
+    }
+  }
+
+  // .financing-programs__card--alphaeon
+  &__card--alphaeon {
+    background: #f5f7f8;
+
+    .financing-programs__card-button {
+      background: #c22839;
+    }
+  }
+}

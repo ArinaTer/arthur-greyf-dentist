@@ -1,0 +1,46 @@
+@use "../utils/utils" as *;
+@use "../components/components" as *;
+
+.cta-bar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 999;
+
+  @include media(576.98, "max") {
+    padding: 1rem 2rem;
+    background: $white;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .button-book-now {
+    max-width: 15rem;
+    height: 5rem;
+    width: 100%;
+
+    @include media(576.98, "max") {
+      max-width: 100%;
+    }
+  }
+
+  .button-call-us {
+    max-width: 15rem;
+    height: 5rem;
+    width: 100%;
+    display: none;
+
+    @include media(576.98, "max") {
+      max-width: 100%;
+      display: flex;
+    }
+
+    @include media(355.98, "max") {
+      display: none;
+    }
+  }
+}

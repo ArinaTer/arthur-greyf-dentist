@@ -198,7 +198,7 @@
 
     @include media(992.98, "max") {
       width: 100%;
-      overflow: visible;
+      overflow: visible !important;
     }
   }
 

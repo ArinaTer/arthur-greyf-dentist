@@ -1,0 +1,22 @@
+@use "../utils/utils" as *;
+@use "../blocks/intro.scss";
+@use "../blocks/implant-supported-dentures/yomi-benefits.scss";
+@use "../blocks/implant-supported-dentures/steps-smile.scss";
+@use "../blocks/implant-supported-dentures/smile-freely.scss";
+@use "../blocks/implant-supported-dentures/implants-when.scss";
+@use "../blocks/implant-supported-dentures/reviews.scss";
+@use "../blocks/payment-options.scss";
+@use "../blocks/visit-us.scss";
+
+.implant-supported-dentures {
+  .stats-card,
+  .pricing,
+  .faq,
+  .banner {
+    margin-bottom: 6rem;
+
+    @include media(992.98, "max") {
+      margin-bottom: 4rem;
+    }
+  }
+}

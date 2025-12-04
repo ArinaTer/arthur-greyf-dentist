@@ -3,6 +3,9 @@
 
 .footer {
   background: $light-blue;
+  @include media(576.98, "max") {
+    padding-bottom: 4rem;
+  }
 
   // .footer__wrapper
   &__wrapper {
@@ -130,8 +133,9 @@
 
   // .footer__social-icon
   &__social-icon {
-    width: 3rem;
-    height: auto;
+    max-width: 3rem;
+    width: 100%;
+    height: 100%;
   }
 
   // .footer__social-text

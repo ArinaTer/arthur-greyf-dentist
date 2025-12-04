@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="../../assets/files/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../../assets/files/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../../assets/files/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/files/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="WebSite" />
+    <link rel="manifest" href="../../assets/files/favicon/site.webmanifest" />
+    <title>Meet The Team</title>
+</head>
+
+<body class="meet-the-team">
+    <include src="layout/header.html"></include>
+    <main>
+        <extends src="layout/submenu.html">
+            <block name="title">About Us</block>
+            <block name="links">
+                <li class="submenu__item">
+                    <a href="#" class="submenu__link">What Sets Us Apart</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="#" class="submenu__link">Dr. Arthur Greyf</a>
+                </li>
+                <li class="submenu__item _active">
+                    <a href="#" class="submenu__link">Meet The Team</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="#" class="submenu__link">Testimonials</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="#" class="submenu__link">Office Visits</a>
+                </li>
+                <li class="submenu__item">
+                    <a href="#" class="submenu__link">Contact Us</a>
+                </li>
+            </block>
+        </extends>
+        <div class="info-section">
+            <div class="container">
+                <div class="info-section__wrapper">
+                    <div class="info-section__content">
+                        <h1 class="info-section__title">Meet The Team</h1>
+                        <p class="info-section__description">
+                            We recognize that all patients are unique and deserve to receive comprehensive dental care
+                            that
+                            reflects
+                            their individual needs. Our team of experienced dentists is committed to working with you
+                            and your
+                            family to
+                            create a comfortable, stress-free, and rewarding dental experience every time you visit our
+                            practice. With a
+                            focus on delivering the highest quality of care, our skilled professionals offer a wide
+                            range of
+                            dental
+                            services to cater to your specific requirements.
+                        </p>
+                        <p class="info-section__description">
+                            As advocates of comprehensive dental services, we strive to go beyond the conventional to
+                            ensure
+                            that you
+                            and your family receive the exceptional care you deserve. From the moment you step into our
+                            office,
+                            our
+                            dedicated team will work diligently to make your visit a positive and comfortable one.
+                        </p>
+                    </div>
+                    <div class="info-section__image">
+                        <img src="../../assets/images/meet-the-team/team/team-all.png" alt="Team Photo">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <include src="blocks/meet-the-team/team.html"></include>
+
+    </main>
+    <include src="layout/footer.html"></include>
+
+</body>
+
+</html>

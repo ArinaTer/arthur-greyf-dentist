@@ -1,0 +1,184 @@
+@use "../utils/utils" as *;
+@use "../components/components" as *;
+
+.payment-options {
+  margin-bottom: 6rem;
+
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+  }
+
+  // .payment-options__wrapper
+  &__wrapper {
+    display: flex;
+    border-radius: 2rem;
+    background: $light-blue;
+    overflow: hidden;
+
+    @include media(992.98, "max") {
+      flex-direction: column;
+    }
+  }
+
+  // .payment-options__image
+  &__image {
+    width: 42rem;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    @include media(1280.98, "max") {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      flex: 1;
+      object-fit: cover;
+      object-position: 80%;
+
+      @include media(992.98, "max") {
+        flex: initial;
+        height: 20rem;
+        object-position: 100% 83%;
+      }
+
+      @include media(576.98, "max") {
+      }
+    }
+  }
+
+  // .payment-options__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 4rem 4rem 5rem;
+
+    @include media(768.98, "max") {
+      padding: 3rem;
+    }
+  }
+
+  // .payment-options__title
+  &__title {
+    @include h2;
+    margin-bottom: 3rem;
+  }
+
+  // .payment-options__list
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    @include media(1280.98, "max") {
+      gap: 1rem;
+    }
+
+    @include media(992.98, "max") {
+      gap: 2rem;
+    }
+
+    @include media(768.98, "max") {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  // .payment-options__item
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @include media(1280.98, "max") {
+      gap: 0.5rem;
+    }
+
+    @include media(992.98, "max") {
+      gap: 1rem;
+    }
+
+    &::before {
+      content: "";
+      background-image: url("../assets/images/icons/tick-blue.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 2.8rem;
+      height: 2.8rem;
+      @include media(1280.98, "max") {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      @include media(992.98, "max") {
+        width: 2.8rem;
+        height: 2.8rem;
+      }
+    }
+  }
+
+  // .payment-options__item-text
+  &__item-text {
+    @include h3;
+
+    @include media(1280.98, "max") {
+      white-space: nowrap;
+      @include small;
+    }
+
+    @include media(992.98, "max") {
+      @include h3;
+    }
+  }
+
+  // .payment-options__into
+  &__into {
+    display: flex;
+    gap: 2rem;
+
+    @include media(768.98, "max") {
+      flex-direction: column;
+    }
+  }
+
+  // .payment-options__into-item
+  &__into-item {
+    flex: 1 1 0;
+    min-width: 0;
+    padding-right: 2rem;
+
+    @include media(768.98, "max") {
+      padding-right: 0;
+    }
+  }
+
+  // .payment-options__description
+  &__description {
+    @include paragraph;
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  // .payment-options__button
+  &__button {
+    width: max-content;
+    margin: 2rem 0;
+
+    @include media(768.98, "max") {
+      width: 100%;
+    }
+  }
+
+  // .payment-options__note
+  &__note {
+    @include small;
+    color: #999999;
+  }
+}

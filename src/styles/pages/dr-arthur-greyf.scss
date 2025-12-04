@@ -1,0 +1,23 @@
+@use "../utils/utils" as *;
+@use "../blocks/dr-arthur-greyf/about-doctor.scss";
+@use "../blocks/dr-arthur-greyf/doctors-certificate.scss";
+
+.dr-arthur-greyf {
+  .info-section__wrapper {
+    @include media(992.98, "max") {
+      gap: 4rem;
+    }
+  }
+  .info-section__image{
+    max-width: 47.6rem;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    @include media(992.98, "max") {
+      max-width: 20rem;
+      height: 20rem;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+}

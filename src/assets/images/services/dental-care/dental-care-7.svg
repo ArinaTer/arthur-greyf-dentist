@@ -1,0 +1,19 @@
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="56" height="56" rx="10" fill="#FCE6D9"/>
+<g style="mix-blend-mode:multiply" clip-path="url(#clip0_2432_6523)">
+<rect width="36" height="36" transform="translate(10 10)" fill="white"/>
+<path d="M24 37H15C12.7909 37 11 35.2091 11 33V19C11 16.7909 12.7909 15 15 15H37C39.2091 15 41 16.7909 41 19V33C41 35.2091 39.2091 37 37 37H24Z" stroke="black" stroke-width="2"/>
+<path d="M28 41H19C16.7909 41 15 39.2091 15 37V23C15 20.7909 16.7909 19 19 19H41C43.2091 19 45 20.7909 45 23V37C45 39.2091 43.2091 41 41 41H28Z" stroke="white" stroke-width="4"/>
+<path d="M28 41H19C16.7909 41 15 39.2091 15 37V23C15 20.7909 16.7909 19 19 19H41C43.2091 19 45 20.7909 45 23V37C45 39.2091 43.2091 41 41 41H28Z" fill="white" stroke="black" stroke-width="2"/>
+<rect x="15" y="23" width="30" height="2" fill="black"/>
+<rect x="15" y="28" width="30" height="2" fill="black"/>
+<rect x="19" y="33" width="11" height="2" rx="1" fill="black"/>
+<rect x="19" y="36" width="8" height="2" rx="1" fill="black"/>
+<circle cx="39" cy="35" r="2" stroke="black" stroke-width="2"/>
+</g>
+<defs>
+<clipPath id="clip0_2432_6523">
+<rect width="36" height="36" fill="white" transform="translate(10 10)"/>
+</clipPath>
+</defs>
+</svg>

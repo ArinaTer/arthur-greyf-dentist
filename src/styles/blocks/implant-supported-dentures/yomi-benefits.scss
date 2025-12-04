@@ -1,0 +1,232 @@
+@use "../../utils/utils" as *;
+@use "../../components/components" as *;
+
+.yomi-benefits {
+  margin-bottom: 6rem;
+
+  @include media(576.98, "max") {
+    margin-bottom: 4rem;
+  }
+
+  // .yomi-benefits__wrapper
+  &__wrapper {
+    display: flex;
+    gap: 2rem;
+
+    @include media(992.98, "max") {
+      flex-direction: column;
+      gap: 6rem;
+    }
+
+    @include media(576.98, "max") {
+      gap: 3rem;
+    }
+  }
+
+  // .yomi-benefits__left
+  &__left {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem 2rem;
+    flex: 2 1 0%;
+    min-width: 0;
+    align-items: stretch;
+
+    @include media(576.98, "max") {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  // .yomi-benefits__right
+  &__right {
+    flex: 1 1 0%;
+    min-width: 0;
+    display: flex;
+    position: relative;
+  }
+
+  // .yomi-benefits__column
+  &__column {
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  // .yomi-benefits__title
+  &__title {
+    @include h2;
+    margin-bottom: 1.5rem;
+  }
+
+  // .yomi-benefits__text
+  &__text {
+    @include paragraph;
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  // .yomi-benefits__list
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-left: 3rem;
+    list-style-type: none;
+    margin-top: 1rem;
+  }
+
+  // .yomi-benefits__list-item
+  &__list-item {
+    position: relative;
+    @include paragraph;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.4rem;
+      left: -3rem;
+      background-image: url("../assets/images/icons/tick.svg");
+      background-repeat: no-repeat;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  // .yomi-benefits__form
+  &__form {
+    flex: 1 1 0%;
+    background: $light-blue;
+    border-radius: 2rem;
+    padding: 4rem;
+    max-height: 41rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media(992.98, "max") {
+      padding: 3rem;
+    }
+
+    @include media(576.98, "max") {
+      padding: 4rem 3rem;
+    }
+  }
+
+  // .yomi-benefits__form-header
+  &__form-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  // .yomi-benefits__form-title
+  &__form-title {
+    @include h3;
+  }
+
+  // .yomi-benefits__form-icon
+  &__form-icon {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  // .yomi-benefits__form-text
+  &__form-text {
+    @include paragraph;
+    margin-bottom: 2rem;
+  }
+
+  // .yomi-benefits__form-input
+  &__form-input {
+    width: 100%;
+    padding: 1rem 2rem;
+    @include paragraph;
+    border-radius: 0.8rem;
+    background: $white;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2) inset;
+    margin-bottom: 2rem;
+
+    &::placeholder {
+      color: $sand-dark;
+    }
+  }
+
+  // .yomi-benefits__form-button
+  &__form-button {
+    width: 100%;
+  }
+
+  // .yomi-benefits__form-note
+  &__form-note {
+    @include small;
+    margin-top: 3rem;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  // .yomi-benefits__success-message
+  &__success-message {
+    background: #e6f3f0;
+    border-radius: 2rem;
+    padding: 4rem;
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 41rem;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    @include media(992.98, "max") {
+      min-height: initial;
+      height: 100%;
+    }
+  }
+
+  // .yomi-benefits__success-message-icon
+  &__success-message-icon {
+    max-width: 4rem;
+    width: 100%;
+    height: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  // .yomi-benefits__success-message-title
+  &__success-message-title {
+    @include h2;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  // .yomi-benefits__success-message-text
+  &__success-message-text {
+    @include paragraph;
+    text-align: center;
+  }
+}
+
+.yomi-benefits-services {
+  .yomi-benefits {
+    // .yomi-benefits__list-item
+    &__list-item {
+      &::before {
+        background-image: url("../assets/images/icons/tick-blue.svg");
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+}

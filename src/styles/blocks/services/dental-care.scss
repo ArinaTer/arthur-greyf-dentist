@@ -1,0 +1,114 @@
+@use "../../utils/utils" as *;
+@use "../../components/components" as *;
+
+.dental-care {
+  margin-bottom: 6rem;
+
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+  }
+
+  // .dental-care__title
+  &__title {
+    @include h1;
+    text-align: center;
+    margin-bottom: 4rem;
+
+    @include media(992.98, "max") {
+      @include h1-mob;
+      margin-bottom: 3rem;
+    }
+  }
+
+  // .dental-care__wrapper
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include media(992.98, "max") {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // .dental-care__item
+  &__item {
+    padding-right: 5rem;
+    padding-left: 3rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -3rem;
+      left: 0;
+      width: calc(100% + 1px);
+      height: 1px;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    @include media(992.98, "max") {
+      border-left: none;
+      padding-left: 0;
+      padding-right: 2rem;
+    }
+
+    @include media(992.99, "min") {
+      &:nth-of-type(-n + 3) {
+        &::before {
+          content: "";
+          position: absolute;
+          top: -3rem;
+          left: 0;
+          width: calc(100% + 1px);
+          height: 1px;
+          background: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+
+    @include media(992.99, "min") {
+      &:nth-of-type(3n + 1) {
+        border-left: none;
+        padding-left: 0rem;
+      }
+    }
+
+    @include media(992.98, "max") {
+      &:nth-child(1) {
+        &::before {
+          content: "";
+          position: absolute;
+          top: -3rem;
+          left: 0;
+          width: calc(100% + 1px);
+          height: 1px;
+          background: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+
+  // .dental-care__item-icon
+  &__item-icon {
+    width: 100%;
+    max-width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  // .dental-care__item-title
+  &__item-title {
+    @include h2;
+    margin-bottom: 2rem;
+  }
+
+  // .dental-care__item-text
+  &__item-text {
+    @include paragraph;
+  }
+}

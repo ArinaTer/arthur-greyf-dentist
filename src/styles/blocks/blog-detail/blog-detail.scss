@@ -1,0 +1,126 @@
+@use "../../utils/utils" as *;
+@use "../../components/components" as *;
+
+.blog-detail {
+  padding: 6rem 0;
+
+  @include media(992.98, "max") {
+    padding: 4rem 0;
+  }
+
+  // .blog-detail__wrapper
+  &__wrapper {
+    max-width: 90rem;
+    width: 100%;
+    margin: 0 auto;
+
+    @include media(992.98, "max") {
+      max-width: 100%;
+      padding: 0 3rem;
+    }
+
+    @include media(576.98, "max") {
+      padding: 0 2rem;
+    }
+  }
+
+  // .blog-detail__header
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
+
+  // .blog-detail__subtitle
+  &__subtitle {
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $blue;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  // .blog-detail__title
+  &__title {
+    @include h1;
+    margin-bottom: 2rem;
+    text-align: center;
+    line-height: 1.4;
+
+    @include media(992.98, "max") {
+      @include h1-mob;
+      line-height: 1.4;
+    }
+  }
+
+  // .blog-detail__description
+  &__description {
+    @include paragraph;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  // .blog-detail__date
+  &__date {
+    @include small;
+    text-align: center;
+  }
+
+  // .blog-detail__image
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin-bottom: 4rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  // .blog-detail__content
+  &__content {
+    margin-bottom: 4rem;
+
+    p {
+      @include paragraph;
+      margin-bottom: 4rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      @include paragraph;
+      color: $blue;
+    }
+
+    h2 {
+      @include h2;
+      margin-bottom: 2rem;
+    }
+  }
+
+  // .blog-detail__footer
+  &__footer {
+    margin-top: 4rem;
+  }
+
+  // .blog-detail__button
+  &__button {
+    width: max-content;
+
+    @include media(576.98, "max") {
+      width: 100%;
+    }
+  }
+}

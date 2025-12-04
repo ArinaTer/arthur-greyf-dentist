@@ -9,6 +9,7 @@ export function mobileNav() {
     const mainMenu = root.querySelector('#mobileNavMain');
     const submenus = root.querySelectorAll('.mobile-nav__menu--submenu');
 
+
     if (!contentSubmenu || !mainMenu) return;
 
     const isMobile = () => window.matchMedia('(max-width: 1024px)').matches;

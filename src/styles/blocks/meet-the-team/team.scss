@@ -1,0 +1,86 @@
+@use "../../utils/utils" as *;
+@use "../../components/components" as *;
+.team {
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+  }
+
+  // .team__wrapper
+  &__wrapper {
+    columns: 3;
+    column-gap: 2rem;
+
+    @include media(992.98, "max") {
+      columns: initial;
+      column-gap: initial;
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 4rem 2rem;
+    }
+
+    @include media(576.98, "max") {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // .team__card
+  &__card {
+    display: inline-block;
+    margin: 0 0 6rem;
+    padding-right: 2rem;
+
+    @include media(992.98, "max") {
+      padding-right: 0;
+      margin: 0;
+    }
+  }
+
+  // .team__card-header
+  &__card-header {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include media(576.98, "max") {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  // .team__card-avatar
+  &__card-avatar {
+    max-width: 20rem;
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 20rem;
+
+    @include media(992.98, "max") {
+      max-width: 12rem;
+      height: 12rem;
+    }
+  }
+
+  // .team__card-name
+  &__card-name {
+    @include h2;
+  }
+
+  // .team__card-text
+  &__card-text {
+    @include paragraph;
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  // .team__card-button
+  &__card-button {
+    width: max-content;
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,95 @@
+@use "../../utils/utils" as *;
+@use "../../components/components" as *;
+
+.faq-detail {
+  margin-bottom: 6rem;
+  margin-top: 6rem;
+
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+
+  // .faq-detail__title
+  &__title {
+    @include h1;
+    margin-bottom: 6rem;
+
+    @include media(992.98, "max") {
+      margin-bottom: 4rem;
+      @include h1-mob;
+    }
+  }
+
+  // .faq-detail__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+
+    @include media(992.98, "max") {
+      flex-direction: column;
+      gap: 4rem;
+    }
+  }
+
+  // .faq-detail__aside
+  &__aside {
+    flex: 0 0 32%;
+    max-width: 32%;
+    display: flex;
+    flex-direction: column;
+
+    @include media(992.98, "max") {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  // .faq-detail__nav
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  // .faq-detail__nav-item
+  &__nav-item {
+  }
+
+  // .faq-detail__nav-link
+  &__nav-link {
+    color: $blue;
+    @include paragraph;
+  }
+
+  // .faq-detail__content
+  &__content {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @include media(992.98, "max") {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  // .faq-detail__item
+  &__item {
+  }
+
+  // .faq-detail__question
+  &__question {
+    @include h2;
+    margin-bottom: 2rem;
+    line-height: 1.2
+  }
+
+  // .faq-detail__answer
+  &__answer {
+    @include paragraph;
+  }
+}

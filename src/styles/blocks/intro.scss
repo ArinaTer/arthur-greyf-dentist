@@ -1,0 +1,120 @@
+@use "../utils/utils" as *;
+@use "../components/components" as *;
+
+.intro {
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+
+  @include media(992.98, "max") {
+    margin-top: 3rem;
+  }
+
+  // .intro__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+    background: $medium-blue;
+    min-height: 40rem;
+
+    @include media(768.98, "max") {
+      flex-direction: column;
+      min-height: initial;
+    }
+  }
+
+  // .intro__content
+  &__content {
+    flex: 0 0 67%;
+    max-width: 67%;
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+
+    @include media(992.98, "max") {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 3rem;
+    }
+
+    @include media(768.98, "max") {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  // .intro__label
+  &__label {
+    @include small-caps;
+    margin-bottom: 2rem;
+  }
+
+  // .intro__title
+  &__title {
+    @include h1;
+    margin-bottom: 2rem;
+
+    @include media(992.98, "max") {
+      @include h1-mob;
+    }
+  }
+
+  // .intro__subtitle
+  &__subtitle {
+    @include h3;
+    margin-bottom: 2rem;
+  }
+
+  // .intro__button
+  &__button {
+    width: max-content;
+
+    @include media(576.98, "max") {
+      width: 100%;
+      padding: 2rem 1rem !important;
+    }
+
+    .button-text {
+      @include media(360.98, "max") {
+        font-size: 1.1rem !important;
+      }
+    }
+  }
+
+  // .intro__image
+  &__image {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    @include media(992.98, "max") {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    @include media(768.98, "max") {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    img {
+      width: 100%;
+      flex: 1;
+      object-fit: cover;
+      object-position: center;
+
+      @include media(768.98, "max") {
+        object-position: bottom;
+        flex: none;
+        height: 40rem;
+      }
+
+      @include media(576.98, "max") {
+        height: 24rem;
+        flex: none;
+      }
+    }
+  }
+}

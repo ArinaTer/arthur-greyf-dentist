@@ -1,0 +1,16 @@
+@use "../utils/utils" as *;
+@import "../blocks/services/problem-solution";
+@import "../blocks/services/dental-care";
+@import "../blocks/services/appointment-cta";
+@import "../blocks/services/reviews-text";
+@import "../blocks/services/reviews-video";
+
+.services-pages {
+  .intro {
+    margin-bottom: 6rem;
+
+    @include media(992.98, "max") {
+      margin-bottom: 4rem;
+    }
+  }
+}

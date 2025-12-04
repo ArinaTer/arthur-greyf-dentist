@@ -30,3 +30,11 @@ body {
     padding: 0 2rem;
   }
 }
+
+main {
+  margin-top: 11.5rem;
+
+  @include media(992.98, "max") {
+    margin-top: 9.5rem;
+  }
+}

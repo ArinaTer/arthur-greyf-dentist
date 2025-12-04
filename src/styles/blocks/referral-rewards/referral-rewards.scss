@@ -1,0 +1,79 @@
+@use "../../utils/utils" as *;
+@use "../../components/components" as *;
+
+.referral-rewards {
+  margin-bottom: 6rem;
+  margin-top: 6rem;
+
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+
+  // .referral-rewards__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+
+    @include media(992.98, "max") {
+      flex-direction: column;
+      gap: 6rem;
+    }
+  }
+
+  // .referral-rewards__right
+  &__right {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 33%;
+    max-width: 33%;
+
+    @include media(992.98, "max") {
+      flex: 0 0 100%;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  // .referral-rewards__title
+  &__title {
+    @include h1;
+    margin-bottom: 2rem;
+
+    @include media(992.98, "max") {
+      text-align: center;
+    }
+  }
+
+  // .referral-rewards__text
+  &__text {
+    @include paragraph;
+
+    @include media(992.98, "max") {
+      text-align: center;
+      max-width: 60rem;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  // .referral-rewards__left
+  &__left {
+    flex: 0 0 66%;
+    max-width: 66%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $sand;
+    padding: 6rem;
+    border-radius: 2rem;
+
+    @include media(992.98, "max") {
+      padding: 4rem;
+      flex: 0 0 100%;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}

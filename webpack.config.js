@@ -7,8 +7,9 @@ const pages = glob.sync("./src/views/pages/*.html");
 const htmlPlugins = pages.map((templatePath) => {
   const name = path.basename(templatePath, ".html");
   return new HtmlWebpackPlugin({
-    filename: `${name}.html`,
+    filename: name === "index" ? "index.html" : `${name}/index.html`,
     template: templatePath,
+    cache: false,
     minify: false,
     inject: "body",
   });
@@ -17,7 +18,6 @@ const htmlPlugins = pages.map((templatePath) => {
 module.exports = {
   mode: "development",
   entry: {
-    vendors: "./src/styles/vendors.scss",
     main: "./src/scripts/index.js",
   },
   output: {
@@ -40,6 +40,13 @@ module.exports = {
           chunks: "all",
           enforce: true,
           priority: 10,
+        },
+        styles: {
+          name: "styles",
+          test: /\.(css|scss|sass)$/,
+          chunks: "all",
+          enforce: true,
+          priority: 20,
         },
         common: {
           name: "common",
@@ -88,6 +95,9 @@ module.exports = {
             loader: "posthtml-loader",
             options: {
               plugins: [
+                require("posthtml-extend")({
+                  root: path.resolve(__dirname, "src/views"),
+                }),
                 require("posthtml-include")({
                   root: path.resolve(__dirname, "src/views"),
                 }),

@@ -1,0 +1,53 @@
+@use "../../utils/utils" as *;
+@use "../../components/components" as *;
+
+.advantages {
+  margin-bottom: 6rem;
+
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+  }
+
+  // .advantages__wrapper
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    padding: 4rem;
+    border-radius: 2rem;
+    background: $sand;
+    overflow: hidden;
+
+    @include media(992.98, "max") {
+      grid-template-columns: repeat(3, 1fr);
+      padding: 3rem;
+    }
+
+    @include media(576.98, "max") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  // .advantages__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-right: 2rem;
+    
+    @include media(992.98, "max") {
+        padding-right: 0;
+    }
+  }
+
+  // .advantages__icon
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  // .advantages__text
+  &__text {
+    @include h3;
+  }
+}

@@ -1,0 +1,110 @@
+@use "../utils/utils" as *;
+@use "../components/components" as *;
+
+.hero {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+
+  @include media(992.98, "max") {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  // .hero__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+    background: $medium-blue;
+    min-height: 40rem;
+
+    @include media(768.98, "max") {
+      flex-direction: column;
+      min-height: initial;
+    }
+  }
+
+  // .hero__content
+  &__content {
+    flex: 0 0 67%;
+    max-width: 67%;
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+
+    @include media(992.98, "max") {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 3rem;
+    }
+
+    @include media(768.98, "max") {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  // .hero__label
+  &__label {
+    @include small-caps;
+    margin-bottom: 2rem;
+  }
+
+  // .hero__title
+  &__title {
+    @include h1;
+    margin-bottom: 2rem;
+
+    @include media(992.98, "max") {
+      @include h1-mob;
+    }
+  }
+
+  // .hero__subtitle
+  &__subtitle {
+    @include h3;
+    margin-bottom: 2rem;
+  }
+
+  // .hero__button
+  &__button {
+    width: max-content;
+  }
+
+  // .hero__image
+  &__image {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    @include media(992.98, "max") {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    @include media(768.98, "max") {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    img {
+      width: 100%;
+      flex: 1;
+      object-fit: cover;
+      object-position: center;
+
+      @include media(768.98, "max") {
+        object-position: bottom;
+        flex: none;
+        height: 40rem;
+      }
+
+      @include media(576.98, "max") {
+        height: 24rem;
+        flex: none;
+      }
+    }
+  }
+}

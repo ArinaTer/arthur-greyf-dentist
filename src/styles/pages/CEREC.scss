@@ -1,0 +1,15 @@
+@use "../utils/utils" as *;
+@use "../blocks/hero.scss";
+
+.cerec-page {
+  .cerec-page__title {
+    @include h1;
+    margin-bottom: 6rem;
+    text-align: center;
+
+    @include media(992.98, "max") {
+      margin-bottom: 4rem;
+      @include h1-mob;
+    }
+  }
+}

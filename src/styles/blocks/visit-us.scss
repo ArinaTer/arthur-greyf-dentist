@@ -1,0 +1,155 @@
+@use "../utils/utils" as *;
+@use "../components/components" as *;
+
+.visit-us {
+  margin-bottom: 6rem;
+
+  @include media(992.98, "max") {
+    margin-bottom: 4rem;
+  }
+
+  // .visit-us__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: stretch;
+    background: $sand;
+    border-radius: 2rem;
+    overflow: hidden;
+    @include media(768.98, "max") {
+      flex-direction: column;
+    }
+  }
+
+  // .visit-us__info
+  &__info {
+    padding: 6rem;
+    width: 44rem;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    @include media(992.98, "max") {
+      width: 50%;
+      padding: 4rem;
+    }
+
+    @include media(768.98, "max") {
+      width: 100%;
+    }
+
+    @include media(576.98, "max") {
+      padding: 3rem;
+    }
+  }
+
+  // .visit-us__title
+  &__title {
+    @include h1;
+    margin-bottom: 4rem;
+
+    @include media(992.98, "max") {
+      @include h1-mob;
+    }
+
+    @include media(576.98, "max") {
+      margin-bottom: 3rem;
+    }
+  }
+
+  // .visit-us__address
+  &__address {
+    @include paragraph;
+    margin-bottom: 4rem;
+
+    @include media(576.98, "max") {
+      margin-bottom: 3rem;
+    }
+  }
+
+  // .visit-us__contacts
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+
+    @include media(576.98, "max") {
+      margin-bottom: 3rem;
+    }
+
+    .visit-us__value {
+      @include media(768.98, "max") {
+        color: $blue;
+      }
+    }
+  }
+
+  // .visit-us__item
+  &__item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #d9d9d9;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    gap: 1rem;
+
+    &:first-of-type {
+      padding: 0 0 1rem;
+    }
+
+    &:last-of-type {
+      padding: 1rem 0 0;
+      border-bottom: none;
+    }
+  }
+
+  // .visit-us__label
+  &__label {
+    @include paragraph;
+    color: $sand-dark;
+  }
+
+  // .visit-us__value
+  &__value {
+    @include paragraph;
+
+    &--red {
+      color: #ff3131;
+    }
+  }
+
+  // .visit-us__hours
+  &__hours {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .visit-us__hours-title
+  &__hours-title {
+    @include h3;
+    margin-bottom: 1rem;
+  }
+
+  // .visit-us__map
+  &__map {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+
+    @include media(992.98, "max") {
+      width: 50%;
+      flex: 0 0 auto;
+    }
+
+    @include media(768.98, "max") {
+      width: 100%;
+    }
+  }
+
+  // .visit-us__map-image
+  &__map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

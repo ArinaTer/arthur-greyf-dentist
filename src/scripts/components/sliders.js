@@ -1,12 +1,31 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, EffectFade, Autoplay } from 'swiper/modules';
+
+export function slidersPromo() {
+    document.querySelectorAll('.promo__swiper').forEach((el) => {
+        const slidesCount = el.querySelectorAll('.swiper-slide').length;
+
+        new Swiper(el, {
+            modules: [Navigation, EffectFade, Autoplay],
+            loop: true,
+            loopedSlides: slidesCount,
+            slidesPerView: 1,
+            effect: "fade",
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            speed: 800,
+        });
+    });
+}
 
 export function slidersStatsCard() {
     document.querySelectorAll('.stats-card__swiper').forEach((el) => {
         new Swiper(el, {
             breakpoints: {
                 320: {
-                    slidesPerView: 2.4,
+                    slidesPerView: 2.2,
                     spaceBetween: 10,
                     allowTouchMove: true,
                 },
@@ -29,7 +48,7 @@ export function slidersAboutFounder() {
 
             breakpoints: {
                 320: {
-                    slidesPerView: 1.2,
+                    slidesPerView: 1,
                     centeredSlides: true,
                 },
                 768: {
@@ -98,6 +117,31 @@ export function slidersPricing() {
                     slidesPerView: 4,
                     spaceBetween: 20,
                     allowTouchMove: false,
+                }
+            },
+        });
+    });
+}
+
+
+export function slidersReviews() {
+    document.querySelectorAll('.reviews__swiper').forEach((el) => {
+        new Swiper(el, {
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                    allowTouchMove: true,
+                },
+                768: {
+                    slidesPerView: 2.01,
+                    spaceBetween: 10,
+                    allowTouchMove: true,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                    allowTouchMove: true,
                 }
             },
         });

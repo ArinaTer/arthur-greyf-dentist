@@ -1,0 +1,59 @@
+@use "../utils/utils" as *;
+@use "../components/components" as *;
+
+.info-section {
+  margin-bottom: 6rem;
+  margin-top: 6rem;
+
+  @include media(992.98, "max") {
+    margin-top: 4rem;
+  }
+
+  // .info-section__wrapper
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  // .info-section__content
+  &__content {
+    max-width: 67rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  // .info-section__title
+  &__title {
+    @include h1;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    @include media(992.98, "max") {
+      @include h1-mob;
+    }
+  }
+
+  // .info-section__description
+  &__description {
+    text-align: center;
+    @include h3;
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  // .info-section__image
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
